@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../static/index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-    <div class="inputBox">
-        <input type="text" required="required" id="first_name">
-        <span>First Name</span>
-    </div>
-    <div class="inputBox">
-        <input type="text" required="required" id="last_name">
-        <span>Last Name</span>
-    </div>
-    <div>
-        <button onclick="getInputValue()" class="custom-btn btn-style">Submit</button>
-    </div>
+    <link rel="stylesheet" href="../static/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button onclick="setRandomValue()" class="custom-btn btn-style">GENERATE</button> 
+    <form
+      action="/generate"
+      method="post"
+      class="form-style"
+    >
+      <div>
+      <canvas id="canvas" width="500" height="500" name = 'canvas'></canvas>
+      </div>
+      <button class="custom-btn btn-style" type="Submit">GENERATE</button>
+      <img src="../static/fake_images.png" alt="logo" class="logo" />
+    </form>
+
     <script src="../static/index.js"></script>
-</body>
+    <script src="../static/canvas.js"></script>
+  </body>
 </html>
