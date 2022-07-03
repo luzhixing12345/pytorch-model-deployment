@@ -29,6 +29,21 @@ git clone git@github.com:luzhixing12345/pytorch-model-deployment.git
 - [深度学习模型部署(2)]()
 - [深度学习模型部署(3)]()
 
+## 运行
+
+```bash
+flask run --host=0.0.0.0 --port=3000
+```
+
+```bash
+nohup flask run --host=0.0.0.0 --port=3000 2>&1 &
+```
+
+```bash
+ps -ef
+kill PID 
+```
+
 ## 实例
 
 笔者使用服务器搭建了一个[基于WGAN生成动漫头像的网站](https://luzhixing12345.github.io/Anime-WGAN/)
