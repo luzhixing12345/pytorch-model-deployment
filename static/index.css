@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url("http://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +8,17 @@
 
 body {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   /* gap: 30px; */
   background: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
 }
 
-.form-style {
+.content {
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: space-around;
   width: 80%;
   height: 80%;
@@ -26,22 +27,53 @@ body {
   padding: 30px;
 }
 
+.container {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.square {
+  background-color: #1d1d1d;
+  box-shadow: 0 0 2px #000;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  transition: 2s ease;
+}
+
+.square:hover {
+  transition-duration: 0s;
+}
+
 .custom-btn {
   width: 200px;
   height: 80px;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
+  /* font-family: "Lato", sans-serif; */
+  font-weight: bold;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  /* box-shadow:  6px 6px 12px #8f8f8f,
+  -6px -6px 12px #ffffff; */
   outline: none;
+}
+
+.changePage {
+  position: fixed;
+  background: #fff;
+  color: #000;
+  height: 50px;
+  border-radius: 50px;
+  right: 30px;
+  top: 30px;
 }
 
 .btn-style {
@@ -57,8 +89,8 @@ body {
   left: 0;
   direction: rtl;
   z-index: 1;
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  box-shadow:  6px 6px 12px #8f8f8f,
+  -6px -6px 12px #ffffff;
   transition: all 0.3s ease;
 }
 .btn-style:hover {
@@ -71,4 +103,30 @@ body {
 }
 .btn-style:active {
   top: 2px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.regenerate-btn {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.notation {
+  margin: auto;
+  margin-top: 10px;
+  color: #727272;
+}
+
+.content .logo {
+  width: 30%;
+  height: 30%;
+}
+
+.content .logo-large {
+  width: 40%;
+  height: 40%;
 }

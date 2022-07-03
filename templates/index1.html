@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'index.css')}}" />
+  </head>
+  <body>
+    
+    <form action='/changePageTo' method='post'>
+    <button class='custom-btn changePage'>切换页面</button>
+    </form>
+    <div class="content">
+      <div class="inputBox">
+        <div class="container" id="container" draggable="false"></div>
+        <div class="notation">左键变深,右键变浅</div>
+        <button class="custom-btn btn-style regenerate-btn" style="height: 50px;" onclick="initalizeContainerColor()">随机</button>
+      </div>
+      <form action='/generate' method='post' onsubmit='getJSON()' id='SUBMIT'>
+      <button class="custom-btn btn-style" type='submit'>生成</button>
+      <input type="hidden" name="jsonval" value=""/>
+      </form>
+      <img src={{image_url}} alt="logo" class="logo" />
+    </div>
+    <div id="data" datavalue='{{ data }}' loaddata='{{load}}'></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static',filename = 'index.js')}}"></script>
+  </body>
+</html>

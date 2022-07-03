@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'index.css')}}" />
+  </head>
+  <body>
+    
+    <form action='/changePageBack' method='post'>
+    <button class='custom-btn changePage'>切换页面</button>
+    </form>
+    <div class="content">
+      <img src={{image_url}} alt="logo" class="logo-large" />
+      <form action='/generate' method='post' id='SUBMIT'>
+        <button class="custom-btn btn-style" type='submit'>生成</button>
+        <input type="hidden" name="jsonval" value=""/>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static',filename = 'index.js')}}"></script>
+  </body>
+</html>
