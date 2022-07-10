@@ -25,9 +25,8 @@ git clone git@github.com:luzhixing12345/pytorch-model-deployment.git
 
 笔者在博客上整理了相关的内容,请参考**对应部分的博客和相应的分支**
 
-- [深度学习模型部署(1)]()
-- [深度学习模型部署(2)]()
-- [深度学习模型部署(3)]()
+- [深度学习模型部署(1)-前言和基本介绍](https://luzhixing12345.github.io/2022/06/13/pytorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-1/)
+- [深度学习模型部署(2)-服务器与本地](https://luzhixing12345.github.io/2022/06/13/pytorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-2/)
 
 ## 实例
 
