@@ -30,7 +30,7 @@ git clone git@github.com:luzhixing12345/pytorch-model-deployment.git
 
 ## 实例
 
-笔者使用服务器搭建了一个[基于WGAN生成动漫头像的网站](https://luzhixing12345.github.io/Anime-WGAN/)
+笔者使用服务器搭建了一个[基于WGAN生成动漫头像的网站](https://visual.kamilu.top)
 
 > 如果网站挂了估计是被攻击了或者我没续费服务器,请留issue提醒我,谢谢
 
