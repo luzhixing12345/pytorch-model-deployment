@@ -19,7 +19,11 @@
 
 ```bash
 git clone git@github.com:luzhixing12345/pytorch-model-deployment.git
+cd pytorch-model-deployment
+git checkout -b web-server origin/web-server
 ```
+
+[下载预训练模型](https://github.com/luzhixing12345/pytorch-model-deployment/releases/download/v0.0.1/WGAN_G_ANIME256.pth),放在本文件夹的根目录
 
 ## 博客
 
@@ -27,7 +31,6 @@ git clone git@github.com:luzhixing12345/pytorch-model-deployment.git
 
 - [深度学习模型部署(1)-前言和基本介绍](https://luzhixing12345.github.io/2022/06/13/pytorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-1/)
 - [深度学习模型部署(2)-服务器与本地](https://luzhixing12345.github.io/2022/06/13/pytorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-2/)
-- [深度学习模型部署(3)-真正的服务器](https://luzhixing12345.github.io/2022/06/14/pytorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-3/)
 
 ## 运行
 
