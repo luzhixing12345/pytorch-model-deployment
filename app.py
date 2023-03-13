@@ -13,6 +13,9 @@ app.secret_key = 'fkdjsafjdkfdlkjfadskjfadskljdsfklj'
 
 G = load_model()
 
+single_number = 0
+multiply_number = 0
+
 @app.route('/')
 def index():
     return render_template('index1.html',image_url="./static/fake_images.png",data=0,load = 'false')
@@ -50,9 +53,13 @@ def generate():
             fake_images = fake_images.mul(0.5).add(0.5).cpu()
             
             image_grid = utils.make_grid(fake_images, nrow=8)
-            utils.save_image(image_grid, './static/images/multiply.png')
+            global multiply_number
+            image_url = f'./static/images/{multiply_number}.png'
+            multiply_number += 1
+            if multiply_number > 10:
+                multiply_number = 0
+            utils.save_image(image_grid, image_url)
             print('Saved fake images')
-            image_url = "./static/images/multiply.png"
             
             return render_template('index2.html', image_url=image_url)
         else:
@@ -70,9 +77,13 @@ def generate():
             fake_images = fake_images.mul(0.5).add(0.5).cpu()
             
             image_grid = utils.make_grid(fake_images[0], nrow=1)
-            utils.save_image(image_grid, './static/images/single.png')
+            global single_number
+            image_url = f'./static/images/{single_number}.png'
+            single_number += 1
+            if single_number > 10:
+                single_number = 0
+            utils.save_image(image_grid, image_url)
             print('Saved fake images')
-            image_url = "./static/images/single.png"
             
             return render_template('index1.html', image_url=image_url,data=data,load='true')
     

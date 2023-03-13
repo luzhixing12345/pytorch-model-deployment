@@ -27,8 +27,8 @@ git checkout -b web-server origin/web-server
 
 笔者在博客上整理了相关的内容,请参考**对应部分的博客和相应的分支**
 
-- [深度学习模型部署(1)-前言和基本介绍](https://luzhixing12345.github.io/2022/06/13/pytorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-1/)
-- [深度学习模型部署(2)-服务器与本地](https://luzhixing12345.github.io/2022/06/13/pytorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-2/)
+- [深度学习模型部署(1)-前言和基本介绍](https://luzhixing12345.github.io/2022/06/13/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-1/)
+- [深度学习模型部署(2)-服务器与本地](https://luzhixing12345.github.io/2022/06/13/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2-2/)
 
 ## 依赖
 
@@ -41,16 +41,22 @@ conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 
 ## 运行
 
+把下面的ip替换为你自己的即可
+
+前台运行
+
 ```bash
 flask run --host=0.0.0.0 --port=3000
 ```
+
+后台运行
 
 ```bash
 nohup flask run --host=0.0.0.0 --port=3000 2>&1 &
 ```
 
 ```bash
-ps -ef
+ps -ef | grep flask
 kill PID 
 ```
 

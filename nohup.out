@@ -1,0 +1,154 @@
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.0.241:3000/ (Press CTRL+C to quit)
+127.0.0.1 - - [13/Mar/2023 12:16:32] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:16:36] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:16:36] "GET /static/images/single.png HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:16:42] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:16:47] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:16:54] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:16:56] "POST /changePageTo HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:16:59] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:17:05] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:22:13] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:22:16] "POST /changePageTo HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:22:20] "POST /generate HTTP/1.0" 200 -
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:3000/ (Press CTRL+C to quit)
+ * Debug mode: off
+Address already in use
+Port 3000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+127.0.0.1 - - [13/Mar/2023 12:32:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [13/Mar/2023 12:32:18] "GET /static/index.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Mar/2023 12:32:18] "GET /static/fake_images.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Mar/2023 12:32:18] "GET /static/index.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Mar/2023 12:32:19] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [13/Mar/2023 12:32:42] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:32:43] "POST /changePageTo HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:32:46] "POST /generate HTTP/1.0" 200 -
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.241:3000
+Press CTRL+C to quit
+127.0.0.1 - - [13/Mar/2023 12:56:58] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:57:00] "POST /changePageTo HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:57:03] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:57:03] "GET /static/images/0.png HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:57:16] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:57:16] "GET /static/images/1.png HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 12:57:26] "POST /changePageBack HTTP/1.0" 302 -
+127.0.0.1 - - [13/Mar/2023 12:57:26] "GET / HTTP/1.0" 200 -
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.241:3000
+Press CTRL+C to quit
+127.0.0.1 - - [13/Mar/2023 12:59:22] "GET / HTTP/1.0" 200 -
+[2023-03-13 12:59:25,681] ERROR in app: Exception on /generate [POST]
+Traceback (most recent call last):
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/PIL/Image.py", line 2298, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/kamilu/pytorch-model-deployment/app.py", line 85, in generate
+    utils.save_image(image_grid, single_number)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/torchvision/utils.py", line 151, in save_image
+    im.save(fp, format=format)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/PIL/Image.py", line 2300, in save
+    raise ValueError(f"unknown file extension: {ext}") from e
+ValueError: unknown file extension: 
+127.0.0.1 - - [13/Mar/2023 12:59:25] "POST /generate HTTP/1.0" 500 -
+[2023-03-13 12:59:42,215] ERROR in app: Exception on /generate [POST]
+Traceback (most recent call last):
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/PIL/Image.py", line 2298, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/kamilu/pytorch-model-deployment/app.py", line 85, in generate
+    utils.save_image(image_grid, single_number)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/torchvision/utils.py", line 151, in save_image
+    im.save(fp, format=format)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/PIL/Image.py", line 2300, in save
+    raise ValueError(f"unknown file extension: {ext}") from e
+ValueError: unknown file extension: 
+127.0.0.1 - - [13/Mar/2023 12:59:42] "POST /generate HTTP/1.0" 500 -
+127.0.0.1 - - [13/Mar/2023 12:59:44] "GET / HTTP/1.0" 200 -
+[2023-03-13 12:59:48,546] ERROR in app: Exception on /generate [POST]
+Traceback (most recent call last):
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/PIL/Image.py", line 2298, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/kamilu/pytorch-model-deployment/app.py", line 85, in generate
+    utils.save_image(image_grid, single_number)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/torchvision/utils.py", line 151, in save_image
+    im.save(fp, format=format)
+  File "/home/kamilu/anaconda3/lib/python3.9/site-packages/PIL/Image.py", line 2300, in save
+    raise ValueError(f"unknown file extension: {ext}") from e
+ValueError: unknown file extension: 
+127.0.0.1 - - [13/Mar/2023 12:59:48] "POST /generate HTTP/1.0" 500 -
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.0.241:3000
+Press CTRL+C to quit
+127.0.0.1 - - [13/Mar/2023 13:00:54] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:00:58] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:00:58] "GET /static/images/0.png HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:01:03] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:01:03] "GET /static/images/1.png HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:01:07] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:01:07] "GET /static/images/2.png HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:01:08] "POST /changePageTo HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:01:12] "POST /generate HTTP/1.0" 200 -
+127.0.0.1 - - [13/Mar/2023 13:01:12] "GET /static/images/0.png HTTP/1.0" 200 -
